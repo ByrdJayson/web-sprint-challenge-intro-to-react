@@ -15,7 +15,6 @@ const StyledContainer = styled.div`
 
   :hover {
     background-color: grey;
-    opacity: 90%;
     transform: scale(1.2);
   }
 
