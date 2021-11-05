@@ -3,13 +3,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const StyledDiv = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-weight: bold;
-  width: 100%;
-  color: midnightblue;
+
+
+const StyledContainer = styled.div`
+  border: 2px solid white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
 `
 
 
@@ -17,13 +17,20 @@ export default function Character(props){
   const { characters } = props;
 
   return ( characters.map(char => {
-    return <StyledDiv>
-      <h1 key={char.name}>{char.name}</h1>
-      <p>{char.birth_year}</p>
-      <p>{char.height}</p>
-      <p>{char.mass}</p>
+    return <StyledContainer>
 
-    </StyledDiv>
+
+          <h1>{char.name}</h1>
+          {char.gender === 'n/a' ? <p>Robot</p> : <p>{char.gender}</p>}
+          <p>Birth: {char.birth_year}</p>
+          <p>Height: {char.height}</p>
+          <p>Mass: {char.mass}</p>
+
+
+
+
+    </StyledContainer>
+
 
   })
   )
