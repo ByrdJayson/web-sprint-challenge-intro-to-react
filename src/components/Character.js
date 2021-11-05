@@ -10,6 +10,15 @@ const StyledContainer = styled.div`
   padding-top: 2rem;
   padding-bottom: 2rem;
 
+
+
+
+  :hover {
+    background-color: grey;
+    opacity: 90%;
+    transform: scale(1.2);
+  }
+
 `
 
 
